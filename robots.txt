@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://serfinanceiro.com.br/sitemap.xml
