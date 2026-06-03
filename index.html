@@ -2,266 +2,123 @@
 <html lang="pt-BR">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ser Financeiro | Treinando sua inteligência financeira</title>
+<title>Ser Financeiro | Educação Financeira, FIIs, Economia e Investimentos</title>
 
-<meta name="description" content="Portal de educação financeira, FIIs, empresas, investimentos e economia em linguagem simples e acessível.">
+<meta name="description" content="Aprenda investimentos, FIIs, economia e inteligência financeira de forma simples. Conteúdo educativo para iniciantes e investidores.">
 
-<meta name="keywords" content="FIIs, ações, investimentos, educação financeira, economia, bolsa de valores">
+<link rel="canonical" href="https://serfinanceiro.com.br/">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-font-family:Arial, sans-serif;
-background:#0b1120;
-color:white;
-line-height:1.6;
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
+    color:#333;
 }
 
-header{
-background:#111827;
-padding:20px 40px;
-border-bottom:1px solid #1f2937;
-position:sticky;
-top:0;
-z-index:1000;
+/* MENU FIXO */
+.top-menu{
+    background:#1b263b;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:9999;
 }
 
-.topbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
+.top-menu a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
 }
 
-.logo{
-font-size:34px;
-font-weight:bold;
-color:#38bdf8;
+.top-menu a:hover{
+    color:#cbd5e1;
 }
 
-.slogan{
-font-size:15px;
-color:#cbd5e1;
-margin-top:5px;
-}
-
-nav{
-margin-top:15px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-right:25px;
-font-weight:bold;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#38bdf8;
-}
-
+/* HERO */
 .hero{
-padding:100px 20px;
-text-align:center;
-max-width:1200px;
-margin:auto;
+    background:#0d1b2a;
+    color:white;
+    padding:70px 20px;
+    text-align:center;
 }
 
 .hero h1{
-font-size:60px;
-margin-bottom:25px;
-color:#38bdf8;
-line-height:1.2;
+    font-size:44px;
+    margin:0;
 }
 
 .hero p{
-font-size:24px;
-max-width:900px;
-margin:auto;
-color:#cbd5e1;
-margin-bottom:40px;
+    max-width:800px;
+    margin:20px auto 0;
+    font-size:18px;
+    line-height:1.6;
 }
 
-.button{
-display:inline-block;
-padding:18px 35px;
-background:#38bdf8;
-color:#0b1120;
-font-weight:bold;
-border-radius:12px;
-text-decoration:none;
-transition:0.3s;
-font-size:18px;
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:50px 20px;
 }
 
-.button:hover{
-background:#7dd3fc;
-transform:translateY(-3px);
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:20px;
 }
 
-.section{
-max-width:1300px;
-margin:auto;
-padding:80px 20px;
-}
-
-.section-title{
-font-size:42px;
-text-align:center;
-margin-bottom:50px;
-color:#38bdf8;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
+/* CARD */
 .card{
-background:#111827;
-padding:30px;
-border-radius:18px;
-border:1px solid #1f2937;
-transition:0.3s;
-
-text-decoration:none;
-color:white;
-display:block;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
-.card:hover{
-transform:translateY(-8px);
-border-color:#38bdf8;
+.card h2{
+    margin-top:0;
+    color:#0d1b2a;
 }
 
-.card h3{
-font-size:24px;
-margin-bottom:18px;
-color:#38bdf8;
+.card a{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    background:#1b263b;
+    color:white;
+    padding:10px 16px;
+    border-radius:6px;
 }
 
-.card p{
-color:#cbd5e1;
-font-size:17px;
+.card a:hover{
+    background:#415a77;
 }
 
-.featured{
-background:#111827;
-border-radius:20px;
-padding:50px;
-margin-top:40px;
-border:1px solid #1f2937;
+/* INFO BOX */
+.info{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    margin-top:40px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    line-height:1.7;
 }
 
-.featured h2{
-font-size:40px;
-margin-bottom:20px;
-color:#38bdf8;
-}
-
-.featured p{
-font-size:20px;
-color:#cbd5e1;
-margin-bottom:30px;
-}
-
-.articles{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.article{
-background:#111827;
-padding:25px;
-border-radius:18px;
-border:1px solid #1f2937;
-transition:0.3s;
-}
-
-.article:hover{
-border-color:#38bdf8;
-transform:translateY(-5px);
-}
-
-.article h3{
-margin-bottom:15px;
-color:#38bdf8;
-}
-
-.article h3 a{
-color:#38bdf8;
-text-decoration:none;
-}
-
- 
-.article p{
-color:#cbd5e1;
-}
-
+/* FOOTER */
 footer{
-background:#111827;
-padding:60px 20px;
-margin-top:80px;
-border-top:1px solid #1f2937;
-}
-
-.footer-content{
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
-}
-
-.footer-section h4{
-margin-bottom:20px;
-color:#38bdf8;
-font-size:22px;
-}
-
-.footer-section p,
-.footer-section a{
-color:#cbd5e1;
-text-decoration:none;
-display:block;
-margin-bottom:10px;
-}
-
-.copy{
-text-align:center;
-margin-top:50px;
-color:#94a3b8;
-font-size:14px;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:42px;
-}
-
-.hero p{
-font-size:20px;
-}
-
-.section-title{
-font-size:34px;
-}
-
+    background:#0d1b2a;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
 }
 
 </style>
@@ -270,192 +127,90 @@ font-size:34px;
 
 <body>
 
- 
-
-<header>
-
-<div class="topbar">
-
-<div>
-<div class="logo">
-Ser Financeiro
-</div>
-
-<div class="slogan">
-Treinando sua inteligência financeira
-</div>
-</div>
-
-</div>
-
-<nav>
-  <a href="/index.html">Home</a>
-  <a href="/fundos-imobiliarios/">FIIs</a>
-  <a href="/acoes-e-mercado/">Ações e Empresas</a>
-  <a href="/educacao-financeira/">Educação Financeira</a>
-  <a href="/economia/">Economia</a>
-  <a href="/ia-e-automacao/">IA e Mercado</a>
-  <a href="/sobre/">Sobre</a>
-  <a href="/contato/">Contato</a>
-  <a href="/politica-de-privacidade/">Política de Privacidade</a>
-  <a href="/termos-de-uso/">Termos de Uso</a>
+<!-- MENU -->
+<nav class="top-menu">
+    <a href="/">Home</a>
+    <a href="/fundos-imobiliarios/">FIIs</a>
+    <a href="/economia/">Economia</a>
+    <a href="/acoes-e-mercado/">Ações</a>
+    <a href="/educacao-financeira/">Educação</a>
+    <a href="/ia-e-automacao/">IA</a>
+    <a href="/sobre/">Sobre</a>
+    <a href="/contato/">Contato</a>
 </nav>
+
+<!-- HERO -->
+<header class="hero">
+
+    <h1>Ser Financeiro</h1>
+
+    <p>
+        Aprenda investimentos, economia e inteligência financeira de forma simples,
+        prática e organizada para quem está começando no mercado.
+    </p>
 
 </header>
 
-<section class="hero">
+<!-- CONTEÚDO -->
+<div class="container">
 
-<h1>
-Entenda investimentos e mercado financeiro de forma simples
-</h1>
+    <h2>📊 Categorias do site</h2>
 
-<p>
-Análises, estudos e educação financeira em linguagem acessível para ajudar você a desenvolver sua inteligência financeira.
-</p>
+    <div class="grid">
 
-<a href="/fundos-imobiliarios/" class="button">
-Explorar Conteúdos
-</a>
+        <div class="card">
+            <h2>Fundos Imobiliários (FIIs)</h2>
+            <p>Aprenda como gerar renda passiva com FIIs e investir no mercado imobiliário.</p>
+            <a href="/fundos-imobiliarios/">Acessar FIIs</a>
+        </div>
 
-</section>
+        <div class="card">
+            <h2>Economia</h2>
+            <p>Entenda juros, inflação, dólar e como a economia afeta seus investimentos.</p>
+            <a href="/economia/">Acessar Economia</a>
+        </div>
 
-<section class="section">
+        <div class="card">
+            <h2>Ações e Mercado</h2>
+            <p>Aprenda a investir em ações e entender empresas na bolsa de valores.</p>
+            <a href="/acoes-e-mercado/">Acessar Ações</a>
+        </div>
 
-<h2 class="section-title">
-Áreas de Estudo
-</h2>
+        <div class="card">
+            <h2>Educação Financeira</h2>
+            <p>Base sólida para organizar dinheiro, investimentos e mentalidade financeira.</p>
+            <a href="/educacao-financeira/">Acessar Educação</a>
+        </div>
 
-<div class="cards">
+        <div class="card">
+            <h2>IA e Automação</h2>
+            <p>Como usar inteligência artificial para produtividade e ganhos financeiros.</p>
+            <a href="/ia-e-automacao/">Acessar IA</a>
+        </div>
 
-<a href="/fundos-imobiliarios/" class="card">
+    </div>
 
-<h3>Fundos Imobiliários</h3>
+    <!-- INFO -->
+    <div class="info">
 
-<p>
-Aprenda a interpretar relatórios, dividendos, riscos e oportunidades dos FIIs.
-</p>
+        <h2>📌 Sobre o projeto</h2>
 
-</a>
+        <p>
+            O Ser Financeiro é um projeto educacional focado em simplificar o aprendizado sobre investimentos
+            e economia para iniciantes.
+        </p>
 
-<div class="card">
-<h3>Empresas</h3>
-<p>
-Análises simplificadas de balanços, resultados financeiros e estratégias empresariais.
-</p>
-</div>
+        <p>
+            O objetivo é criar uma base sólida de conhecimento para decisões financeiras mais conscientes.
+        </p>
 
-<div class="card">
-<h3>Educação Financeira</h3>
-<p>
-Desenvolva conhecimentos importantes sobre investimentos e organização financeira.
-</p>
-</div>
-
-<div class="card">
-<h3>Economia</h3>
-<p>
-Entenda juros, inflação, mercado e os impactos na economia e nos investimentos.
-</p>
-</div>
-
-</div>
-
-<div class="featured">
-
-<h2>
-O mercado financeiro explicado em linguagem simples
-</h2>
-
-<p>
-O objetivo do Ser Financeiro é transformar conteúdos complexos em estudos acessíveis, ajudando pessoas a compreender melhor investimentos, empresas e economia.
-</p>
-
-<a href="/fundos-imobiliarios/" class="button">
-Começar a Estudar
-</a>
+    </div>
 
 </div>
 
-</section>
-
-<section class="section">
-
-<h2 class="section-title">
-Últimos Estudos
-</h2>
-
-<div class="articles">
-
-<div class="article">
-<h3>
-<a href="/fundos-imobiliarios/riscos-fiis.html">
-O que aconteceu com o VGHF11?
-</a>
-</h3>
-<p>
-Entenda os impactos da queda do fundo imobiliário e os principais riscos envolvidos.
-</p>
-</div>
-
-<div class="article">
-  
-<h3>
-<a href="/fundos-imobiliarios/como-analisar-um-fii.html">
-Como analisar um FII pela primeira vez
-</a>
-</h3>
-<p>
-Veja os principais indicadores e como interpretar relatórios de fundos imobiliários.
-</p>
-</div>
-
-<div class="article">
-<h3>
-<a href="/economia/como-juros-afetam-investimentos.html">
-Como juros afetam investimentos
-</a>
-</h3>
-<p>
-Descubra como a taxa Selic influencia ações, FIIs e renda fixa.
-</p>
-</div>
-
-</div>
-
-</section>
-
+<!-- FOOTER -->
 <footer>
-
-<div class="footer-content">
-
-<div class="footer-section">
-<h4>Ser Financeiro</h4>
-<p>
-Portal de educação financeira focado em estudos, análises e inteligência financeira.
-</p>
-</div>
-
-<div class="footer-section">
-<h4>Categorias</h4>
-<a href="#">FIIs</a>
-<a href="#">Empresas</a>
-<a href="#">Educação Financeira</a>
-<a href="#">Economia</a>
-</div>
-
-<div class="footer-section">
-<h4>Importante</h4>
-<p>
-Os conteúdos publicados possuem caráter exclusivamente educacional e informativo.
-</p>
-</div>
-
-</div>
-
-<div class="copy">
-© 2026 Ser Financeiro — Treinando sua inteligência financeira
-</div>
-
+    © 2026 Ser Financeiro - Educação Financeira e Economia
 </footer>
 
 </body>
