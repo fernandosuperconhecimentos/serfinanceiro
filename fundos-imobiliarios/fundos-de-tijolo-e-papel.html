@@ -87,32 +87,68 @@ header p{
     margin:30px 0;
 }
 
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+    background:white;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+table th, table td{
+    border:1px solid #ddd;
+    padding:12px;
+}
+
+table th{
+    background:#1b263b;
+    color:white;
+    text-align:left;
+}
+
+.related-posts{
+    margin-top:60px;
+}
+
+.related-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:20px;
+}
+
+.related-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.related-card h3{
+    margin-top:0;
+    color:#0d1b2a;
+}
+
+.related-card a{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    background:#1b263b;
+    color:white;
+    padding:10px 16px;
+    border-radius:6px;
+}
+
+.related-card a:hover{
+    background:#415a77;
+}
+
 footer{
     background:#0d1b2a;
     color:white;
     text-align:center;
     padding:30px 20px;
     margin-top:50px;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin:20px 0;
-    background:white;
-    border-radius:10px;
-    overflow:hidden;
-}
-
-table th, table td{
-    border:1px solid #ddd;
-    padding:12px;
-    text-align:left;
-}
-
-table th{
-    background:#1b263b;
-    color:white;
 }
 
 </style>
@@ -159,10 +195,6 @@ table th{
 
         <h2>🏢 Fundos de tijolo</h2>
 
-        <p>
-            Investem diretamente em imóveis físicos.
-        </p>
-
         <ul>
             <li>Shoppings</li>
             <li>Galpões logísticos</li>
@@ -171,16 +203,9 @@ table th{
             <li>Agências bancárias</li>
         </ul>
 
-        <p>
-            A renda vem principalmente de aluguéis.
-        </p>
+        <p>Renda vem de aluguéis.</p>
 
         <h2>📄 Fundos de papel</h2>
-
-        <p>
-            Não compram imóveis físicos.
-            Investem em títulos ligados ao setor imobiliário.
-        </p>
 
         <ul>
             <li>CRIs</li>
@@ -188,61 +213,43 @@ table th{
             <li>Letras imobiliárias</li>
         </ul>
 
-        <p>
-            A renda vem de juros desses ativos.
-        </p>
+        <p>Renda vem de juros desses ativos.</p>
 
         <h2>📊 Principais diferenças</h2>
 
         <table>
-
             <tr>
                 <th>Tijolo</th>
                 <th>Papel</th>
             </tr>
-
             <tr>
                 <td>Imóveis físicos</td>
                 <td>Títulos imobiliários</td>
             </tr>
-
             <tr>
-                <td>Renda de aluguel</td>
-                <td>Renda de juros</td>
+                <td>Aluguéis</td>
+                <td>Juros</td>
             </tr>
-
             <tr>
-                <td>Vacância como risco</td>
-                <td>Inadimplência como risco</td>
+                <td>Vacância</td>
+                <td>Inadimplência</td>
             </tr>
-
             <tr>
-                <td>Mais ligado ao mercado imobiliário</td>
-                <td>Mais sensível aos juros</td>
+                <td>Mercado imobiliário</td>
+                <td>Taxa de juros</td>
             </tr>
-
         </table>
 
         <h2>💰 Qual paga mais?</h2>
-
-        <p>
-            Depende do cenário econômico.
-            Fundos de papel podem render mais em juros altos,
-            mas isso não significa menor risco.
-        </p>
+        <p>Depende do cenário econômico. Não existe regra fixa.</p>
 
         <h2>⚠️ Riscos</h2>
+        <p><strong>Tijolo:</strong> vacância, queda de aluguel</p>
+        <p><strong>Papel:</strong> inadimplência, risco de crédito</p>
 
-        <p><strong>Tijolo:</strong> vacância, queda de aluguel, desvalorização</p>
-        <p><strong>Papel:</strong> inadimplência, risco de crédito, juros</p>
+    </div>
 
-        <h2>📌 Conclusão</h2>
-
-        <p>
-            Tijolo e papel são complementares.
-            Muitos investidores usam os dois para diversificação.
-        </p> </div>
-
+    <!-- 🔵 ARTIGOS RELACIONADOS (PADRÃO ATUAL) -->
     <div class="related-posts">
 
         <h2>Artigos relacionados</h2>
@@ -251,32 +258,20 @@ table th{
 
             <div class="related-card">
                 <h3>Riscos dos FIIs</h3>
-                <p>
-                    Conheça os principais riscos antes de investir.
-                </p>
-                <a href="/fundos-imobiliarios/riscos-fiis.html">
-                    Ler artigo
-                </a>
+                <p>Entenda os principais riscos antes de investir.</p>
+                <a href="/fundos-imobiliarios/riscos-fiis.html">Ler artigo</a>
             </div>
 
             <div class="related-card">
-                <h3>Como Investir em FIIs</h3>
-                <p>
-                    Aprenda o passo a passo para começar.
-                </p>
-                <a href="/fundos-imobiliarios/como-investir-em-fiis.html">
-                    Ler artigo
-                </a>
+                <h3>Dividendos dos FIIs</h3>
+                <p>Como funcionam os pagamentos mensais.</p>
+                <a href="/fundos-imobiliarios/dividendos-fiis.html">Ler artigo</a>
             </div>
 
             <div class="related-card">
-                <h3>Como Viver de Renda com FIIs</h3>
-                <p>
-                    Veja estratégias para renda passiva.
-                </p>
-                <a href="/fundos-imobiliarios/como-viver-de-renda-com-fiis.html">
-                    Ler artigo
-                </a>
+                <h3>Como Escolher um Bom FII</h3>
+                <p>Critérios importantes de análise.</p>
+                <a href="/fundos-imobiliarios/como-escolher-um-bom-fii.html">Ler artigo</a>
             </div>
 
         </div>
