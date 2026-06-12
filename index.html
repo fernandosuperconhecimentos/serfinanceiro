@@ -5,97 +5,180 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ser Financeiro | Educação Financeira, FIIs, Economia e Investimentos</title>
+<title>Ser Financeiro | Educação Financeira com Consciência, Investimentos e Prosperidade</title>
 
-<meta name="description" content="Aprenda investimentos, FIIs, economia e inteligência financeira de forma simples. Conteúdo educativo para iniciantes e investidores.">
+<meta name="description" content="Educação financeira simples e prática para organizar o dinheiro, entender investimentos, desenvolver consciência emocional e prosperar com segurança e equilíbrio.">
 
 <link rel="canonical" href="https://serfinanceiro.com.br/">
 
 <style>
 
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f6f9;
-    color:#333;
+/* BASE */
+*{
+    box-sizing:border-box;
 }
 
-/* MENU FIXO */
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    color:#2f3640;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* MENU */
 .top-menu{
-    background:#1b263b;
-    padding:15px;
+    background:#0d1b2a;
+    padding:14px 10px;
     text-align:center;
     position:sticky;
     top:0;
     z-index:9999;
+    box-shadow:0 2px 6px rgba(0,0,0,0.12);
 }
 
 .top-menu a{
     color:white;
     text-decoration:none;
-    margin:0 15px;
+    margin:6px 10px;
     font-weight:bold;
+    font-size:15px;
+    display:inline-block;
 }
 
 .top-menu a:hover{
-    color:#cbd5e1;
+    color:#dbeafe;
 }
 
 /* HERO */
 .hero{
-    background:#0d1b2a;
+    background:linear-gradient(135deg,#0d1b2a,#1b263b);
     color:white;
-    padding:70px 20px;
+    padding:72px 20px 64px;
     text-align:center;
 }
 
 .hero h1{
     font-size:44px;
-    margin:0;
+    line-height:1.15;
+    margin:0 0 18px;
 }
 
-.hero p{
-    max-width:800px;
-    margin:20px auto 0;
-    font-size:18px;
+.hero .subtitle{
+    max-width:850px;
+    margin:0 auto;
+    font-size:20px;
     line-height:1.6;
+}
+
+.hero .support{
+    max-width:780px;
+    margin:22px auto 0;
+    font-size:17px;
+    color:#e5e7eb;
+}
+
+.hero-actions{
+    margin-top:32px;
+}
+
+.button{
+    display:inline-block;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    margin:6px;
+    transition:background 0.2s ease, color 0.2s ease;
+}
+
+.button-primary{
+    background:#ffffff;
+    color:#0d1b2a;
+}
+
+.button-primary:hover{
+    background:#dbeafe;
+}
+
+.button-secondary{
+    background:#415a77;
+    color:#ffffff;
+}
+
+.button-secondary:hover{
+    background:#778da9;
 }
 
 /* CONTAINER */
 .container{
     max-width:1100px;
     margin:auto;
-    padding:50px 20px;
+    padding:48px 20px;
+}
+
+.section-title{
+    color:#0d1b2a;
+    margin-top:0;
+    margin-bottom:12px;
+    font-size:30px;
+    line-height:1.25;
+}
+
+.section-intro{
+    max-width:850px;
+    margin-top:0;
+    margin-bottom:28px;
+    color:#4b5563;
+    font-size:17px;
 }
 
 /* GRID */
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
     gap:20px;
 }
 
 /* CARD */
 .card{
     background:white;
-    padding:25px;
-    border-radius:12px;
+    padding:24px;
+    border-radius:14px;
     box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    border:1px solid #e5e7eb;
 }
 
-.card h2{
+.card h2,
+.card h3{
     margin-top:0;
     color:#0d1b2a;
+    line-height:1.3;
+}
+
+.card p{
+    margin-bottom:0;
 }
 
 .card a{
     display:inline-block;
-    margin-top:15px;
+    margin-top:18px;
     text-decoration:none;
     background:#1b263b;
     color:white;
     padding:10px 16px;
-    border-radius:6px;
+    border-radius:7px;
+    font-weight:bold;
+    font-size:15px;
 }
 
 .card a:hover{
@@ -106,10 +189,56 @@ body{
 .info{
     background:white;
     padding:30px;
-    border-radius:12px;
-    margin-top:40px;
+    border-radius:14px;
+    margin-top:38px;
     box-shadow:0 2px 8px rgba(0,0,0,0.08);
-    line-height:1.7;
+    border:1px solid #e5e7eb;
+}
+
+.info h2{
+    margin-top:0;
+    color:#0d1b2a;
+}
+
+.highlight{
+    background:#eaf2ff;
+    border-left:5px solid #1b263b;
+}
+
+.soft{
+    background:#ffffff;
+}
+
+.warning{
+    background:#fff7ed;
+    border-left:5px solid #c2410c;
+}
+
+/* JORNADA */
+.steps{
+    counter-reset:step;
+}
+
+.step{
+    position:relative;
+    padding-left:48px;
+}
+
+.step:before{
+    counter-increment:step;
+    content:counter(step);
+    position:absolute;
+    left:0;
+    top:22px;
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    background:#1b263b;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
 }
 
 /* FOOTER */
@@ -117,8 +246,64 @@ footer{
     background:#0d1b2a;
     color:white;
     text-align:center;
-    padding:30px;
-    margin-top:50px;
+    padding:32px 20px;
+    margin-top:40px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+footer a{
+    color:#dbeafe;
+    text-decoration:none;
+    margin:0 8px;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/* RESPONSIVO */
+@media (max-width:700px){
+
+    .top-menu{
+        padding:10px 6px;
+    }
+
+    .top-menu a{
+        font-size:14px;
+        margin:5px 6px;
+    }
+
+    .hero{
+        padding:52px 18px 48px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero .subtitle{
+        font-size:18px;
+    }
+
+    .hero .support{
+        font-size:16px;
+    }
+
+    .container{
+        padding:38px 16px;
+    }
+
+    .section-title{
+        font-size:26px;
+    }
+
+    .card,
+    .info{
+        padding:22px;
+    }
 }
 
 </style>
@@ -128,15 +313,13 @@ footer{
 <body>
 
 <!-- MENU -->
-<nav class="top-menu">
-    <a href="/">Home</a>
+<nav class="top-menu" aria-label="Menu principal">
+    <a href="/">Início</a>
     <a href="/educacao-financeira/">Educação Financeira</a>
     <a href="/fundos-imobiliarios/">FIIs</a>
     <a href="/economia/">Economia</a>
     <a href="/sobre/">Sobre</a>
     <a href="/contato/">Contato</a>
-    <a href="/politica-de-privacidade/">Política de Privacidade</a>
-    <a href="/termos-de-uso/">Termos de Uso</a>
 </nav>
 
 <!-- HERO -->
@@ -144,64 +327,261 @@ footer{
 
     <h1>Ser Financeiro</h1>
 
-    <p>
-        Aprenda investimentos, economia e inteligência financeira de forma simples,
-        prática e organizada para quem está começando no mercado.
+    <p class="subtitle">
+        Educação financeira para organizar sua vida, fortalecer sua consciência e prosperar com segurança.
     </p>
+
+    <p class="support">
+        Aprenda a lidar melhor com o dinheiro, entender investimentos, desenvolver inteligência financeira
+        e construir uma relação mais equilibrada com crescimento, renda e prosperidade.
+    </p>
+
+    <div class="hero-actions">
+        <a class="button button-primary" href="/educacao-financeira/">Começar pela Educação Financeira</a>
+        <a class="button button-secondary" href="#jornada">Ver a Jornada</a>
+    </div>
 
 </header>
 
-<!-- CONTEÚDO -->
-<div class="container">
+<!-- CONTEÚDO PRINCIPAL -->
+<main>
 
-    <h2>📊 Categorias do site</h2>
+    <!-- CATEGORIAS -->
+    <section class="container">
 
-    <div class="grid">
+        <h2 class="section-title">Por onde começar?</h2>
 
-       <div class="card">
-            <h2>Educação Financeira</h2>
-            <p> Aprenda a administrar melhor o seu próprio dinheiro.</p>
-            <a href="/educacao-financeira/">Acessar Educação Financeira</a>
-        </div>
-
-         <div class="card">
-            <h2>Fundos Imobiliários (FIIs)</h2>
-            <p>Aprenda como gerar renda passiva com FIIs e investir no mercado imobiliário.</p>
-            <a href="/fundos-imobiliarios/">Acessar FIIs</a>
-        </div>
-               
-
-        <div class="card">
-            <h2>Economia</h2>
-            <p>Entenda juros, inflação, dólar e como a economia afeta seus investimentos.</p>
-            <a href="/economia/">Acessar Economia</a>
-        </div>
-
-        
-    </div>
-
-    <!-- INFO -->
-    <div class="info">
-
-        <h2>📌 Sobre o projeto</h2>
-
-        <p>
-            O Ser Financeiro é um projeto educacional focado em simplificar o aprendizado sobre investimentos
-            e economia para iniciantes.
+        <p class="section-intro">
+            O Ser Financeiro foi criado para simplificar o aprendizado sobre dinheiro, economia e investimentos.
+            A proposta é unir clareza prática, responsabilidade e consciência para ajudar você a tomar decisões
+            financeiras melhores ao longo da vida.
         </p>
 
-        <p>
-            O objetivo é criar uma base sólida de conhecimento para decisões financeiras mais conscientes.
+        <div class="grid">
+
+            <article class="card">
+                <h3>Educação Financeira</h3>
+                <p>
+                    Aprenda a organizar gastos, criar orçamento, montar reserva de emergência,
+                    controlar dívidas e construir uma base financeira mais segura.
+                </p>
+                <a href="/educacao-financeira/">Acessar Educação Financeira</a>
+            </article>
+
+            <article class="card">
+                <h3>Fundos Imobiliários</h3>
+                <p>
+                    Entenda os fundamentos dos FIIs, renda passiva, distribuição de rendimentos
+                    e os principais cuidados antes de investir.
+                </p>
+                <a href="/fundos-imobiliarios/">Acessar FIIs</a>
+            </article>
+
+            <article class="card">
+                <h3>Economia</h3>
+                <p>
+                    Compreenda juros, inflação, dólar, Selic, crédito, renda e como os movimentos
+                    da economia impactam sua vida financeira.
+                </p>
+                <a href="/economia/">Acessar Economia</a>
+            </article>
+
+            <article class="card">
+                <h3>Emoções e Dinheiro</h3>
+                <p>
+                    Reflita sobre medo de dinheiro, culpa por prosperar, senso de não merecimento,
+                    autossabotagem financeira e resistência ao crescimento.
+                </p>
+                <a href="#emocional">Entender essa área</a>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- JORNADA -->
+    <section class="container" id="jornada">
+
+        <h2 class="section-title">Uma jornada financeira mais consciente</h2>
+
+        <p class="section-intro">
+            Antes de buscar grandes resultados, é importante construir uma base. A educação financeira
+            fica mais forte quando existe organização, proteção, conhecimento e maturidade emocional.
         </p>
 
-    </div>
+        <div class="grid steps">
 
-</div>
+            <article class="card step">
+                <h3>Organizar</h3>
+                <p>
+                    Entender quanto entra, quanto sai, para onde o dinheiro vai e quais hábitos precisam
+                    ser ajustados para recuperar clareza e controle.
+                </p>
+            </article>
+
+            <article class="card step">
+                <h3>Proteger</h3>
+                <p>
+                    Criar reserva de emergência, reduzir riscos, evitar dívidas caras e desenvolver mais
+                    segurança para lidar com imprevistos.
+                </p>
+            </article>
+
+            <article class="card step">
+                <h3>Investir</h3>
+                <p>
+                    Aprender os fundamentos dos investimentos, compreender riscos e buscar construção
+                    patrimonial com prudência e constância.
+                </p>
+            </article>
+
+            <article class="card step">
+                <h3>Crescer</h3>
+                <p>
+                    Desenvolver renda, carreira, negócio ou patrimônio sem perder saúde, tempo, foco,
+                    ética, qualidade de vida e equilíbrio emocional.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- EMOÇÕES E DINHEIRO -->
+    <section class="container" id="emocional">
+
+        <div class="info highlight">
+
+            <h2>Dinheiro também envolve emoções</h2>
+
+            <p>
+                Muitas dificuldades financeiras não nascem apenas da falta de informação. Em muitos casos,
+                a pessoa até sabe o que deveria fazer, mas sente medo, culpa, ansiedade, vergonha,
+                resistência ou insegurança diante do dinheiro.
+            </p>
+
+            <p>
+                Medo de crescer, medo de cobrar, medo de ser julgado, medo de ser roubado, culpa por ganhar
+                mais que a família, dificuldade de dizer não, senso de não merecimento e autossabotagem
+                podem influenciar decisões financeiras, profissionais e empresariais.
+            </p>
+
+            <p>
+                Por isso, o Ser Financeiro também valoriza o autoconhecimento financeiro: uma forma de olhar
+                para o dinheiro com mais consciência, equilíbrio, responsabilidade e humanidade.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- PROSPERIDADE CONSCIENTE -->
+    <section class="container">
+
+        <h2 class="section-title">Prosperar sem se perder</h2>
+
+        <p class="section-intro">
+            Ganhar mais dinheiro pode ser importante, mas crescer de forma saudável exige algo maior:
+            clareza, limites, estratégia, ética e preservação da qualidade de vida.
+        </p>
+
+        <div class="grid">
+
+            <article class="card">
+                <h3>Clareza financeira</h3>
+                <p>
+                    Entender a própria realidade financeira ajuda a tomar decisões mais racionais,
+                    reduzir desperdícios e planejar melhor o futuro.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Maturidade emocional</h3>
+                <p>
+                    Reconhecer padrões emocionais com dinheiro pode diminuir impulsos,
+                    medos e escolhas que prejudicam o crescimento.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Crescimento sustentável</h3>
+                <p>
+                    Aumentar renda e patrimônio com responsabilidade, sem transformar tudo em urgência,
+                    pressão, ganância ou perda de qualidade humana.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- SOBRE O PROJETO -->
+    <section class="container">
+
+        <div class="info soft">
+
+            <h2>Sobre o Ser Financeiro</h2>
+
+            <p>
+                O Ser Financeiro é um projeto educacional criado para tornar a educação financeira mais
+                acessível, prática e humana. Aqui você encontra conteúdos sobre organização financeira,
+                investimentos, economia, renda passiva e inteligência financeira.
+            </p>
+
+            <p>
+                A proposta é ajudar iniciantes e interessados no tema a desenvolverem uma base mais sólida
+                para decisões financeiras conscientes, sem promessas fáceis, sem atalhos perigosos e sem
+                linguagem desnecessariamente complicada.
+            </p>
+
+            <p>
+                O objetivo é simples: ajudar mais pessoas a compreenderem melhor o dinheiro, protegerem sua
+                vida financeira e crescerem com mais segurança, equilíbrio e responsabilidade.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- AVISO RESPONSÁVEL -->
+    <section class="container">
+
+        <div class="info warning">
+
+            <h2>Conteúdo educativo e responsável</h2>
+
+            <p>
+                Os conteúdos publicados no Ser Financeiro têm finalidade educacional e informativa.
+                Eles não representam recomendação individual de investimento, consultoria financeira,
+                jurídica, contábil, psicológica ou terapêutica.
+            </p>
+
+            <p>
+                Cada pessoa deve considerar sua própria realidade, seus objetivos, seus riscos e,
+                quando necessário, buscar orientação profissional adequada.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
-    © 2026 Ser Financeiro - Educação Financeira e Economia
+
+    <p>© 2026 Ser Financeiro - Educação Financeira, Economia e Prosperidade Consciente</p>
+
+    <p>
+        <a href="/politica-de-privacidade/">Política de Privacidade</a>
+        |
+        <a href="/termos-de-uso/">Termos de Uso</a>
+        |
+        <a href="/contato/">Contato</a>
+    </p>
+
 </footer>
 
 </body>
 </html>
+
